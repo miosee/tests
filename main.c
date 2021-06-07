@@ -2,7 +2,7 @@
  * File:   main.c
  * Author: Kevin
  *
- * Created on 26 août 2015, 13:49
+ * Created on 26 aoÃ»t 2015, 13:49
  */
 
 #include <stdio.h>
@@ -12,13 +12,13 @@
 #define DATA_LENGTH 5
 
 typedef struct {
-    int min;
-    int max;
-} minMaxType;
+    int16_t min;
+    int16_t max;
+} minMaxInt16_t;
 
-minMaxType getMinMax(int* vect, int length) {
-    minMaxType data;
-    int i ;
+minMaxInt16_t getMinMax(int16_t* vect, int16_t length) {
+    minMaxInt16_t data;
+    int16_t i ;
 
     data.min = vect[0];
     data.max = vect[0];
@@ -34,9 +34,9 @@ minMaxType getMinMax(int* vect, int length) {
 }
 
 int main(void) {
-    int data[DATA_LENGTH] = {0, 0, 0, 0, 0};
-    int i;
-    minMaxType result;
+    int16_t data[DATA_LENGTH] = {0, 0, 0, 0, 0};
+    int16_t i;
+    minMaxInt16_t result;
     
     result = getMinMax(data, DATA_LENGTH);
      while ((result.max<10) && (result.min>-10)) {
